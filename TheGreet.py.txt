@@ -1,0 +1,24 @@
+from datetime import datetime
+time=datetime.now()
+t=time.strftime('%H:%M:%S')
+h=int(time.strftime('%H'))
+tt=24-h
+m=int(time.strftime('%M'))
+s=int(time.strftime('%S'))
+if (h>5 and h<12):
+  print("Good Morning")
+elif(h>12 and h<17):
+  print("Good Afternoon")
+else:
+  print('Good Night')
+print("Also want to let you know that the time is",t, "so it is ")
+if (h>0 and h<12):
+  print("a.m.")
+else:
+  print('p.m.')
+
+if h < 12:
+  a = 'In 12 hours time zone the current time will be ' + str(h) + ':' + str(m) + ':' + str(s)
+  print(a.replace(' ', ''))
+else:
+  print('In 12 hours time zone the current time will be ' + str(tt) + ':' + str(m) + ':' + str(s))
